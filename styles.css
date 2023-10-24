@@ -1,0 +1,447 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+}
+
+
+main {
+  width: 960px;
+  min-width: 960px;
+  height: 640px;
+  background-color: #eee;
+}
+
+
+#loading:not(.hidden),
+#titlescreen:not(.hidden),
+#epilogue:not(.hidden) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+/******* START LOADING SCREEN STYLING *******/
+
+#loading {
+  background-color: #242424;
+}
+
+.loading-dots {
+  margin-right: -90px;
+  margin-top: 28px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  box-shadow: -72px 0 0 0 #FFF, -48px 0 0 0 #FFF, -24px 0 0 0 #FFF;
+  animation: bounce 1.5s infinite linear;
+}
+
+@keyframes bounce {
+  0% {
+    box-shadow: -72px 0 0 0 #FFF, -48px 0 0 0 #FFF, -24px 0 0 0 #FFF;
+  }
+  16.667% {
+    box-shadow: -72px -10px 0 0 #FFF, -48px 0 0 0 #FFF, -24px 0 0 0 #FFF;
+  }
+  33.333% {
+    box-shadow: -72px 0 0 0 #FFF, -48px 0 0 0 #FFF, -24px 0 0 0 #FFF;
+  }
+  50% {
+    box-shadow: -72px 0 0 0 #FFF, -48px -10px 0 0 #FFF, -24px 0 0 0 #FFF;
+  }
+  66.667% {
+    box-shadow: -72px 0 0 0 #FFF, -48px 0 0 0 #FFF, -24px 0 0 0 #FFF;
+  }
+  83.333% {
+    box-shadow: -72px 0 0 0 #FFF, -48px 0 0 0 #FFF, -24px -10px 0 0 #FFF;
+  }
+  100% {
+    box-shadow: -72px 0 0 0 #FFF, -48px 0 0 0 #FFF, -24px 0 0 0 #FFF;
+  }
+}
+
+/******* END LOADING SCREEN STYLING *******/
+
+/******* START TITLE SCREEN STYLING *******/
+
+#titlescreen h1 {
+  margin: 0;
+}
+
+#titlescreen button {
+  background: repeating-linear-gradient(to bottom, transparent, transparent 1px, white 1px, white 3px), repeating-linear-gradient(to right, #ccc, #ccc 1px, white 1px, white 3px);
+  margin: 20px;
+  padding: 8px 20px;
+  font: inherit;
+  cursor: pointer;
+  border: 2px solid #333;
+  box-shadow: 4px 4px #333;
+  border-radius: 4px;
+  transition: all 0.1s;
+}
+
+#titlescreen button:hover,
+#titlescreen button:focus {
+  box-shadow: 2px 2px #333;
+  margin: 22px 18px 18px 22px;
+}
+
+#titlescreen .wrapper {
+  width: 90%;
+  height: 90%;
+  background-color: white;
+  margin: 16px;
+  position: relative;
+  border-radius: 10px;
+  border: 2px solid #333;
+  box-shadow: 4px 4px #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#titlescreen a {
+  color: inherit;
+}
+
+#titlescreen .wrapper::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: repeating-linear-gradient(to bottom, transparent, transparent 1px, white 1px, white 3px), repeating-linear-gradient(to right, #ccc, #ccc 1px, white 1px, white 3px);
+  border-radius: 9px 9px 0 0;
+  border-bottom: 2px solid #333;
+  box-sizing: border-box;
+  height: 30px;
+}
+
+#titlescreen .wrapper::after {
+  content: "";
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background-color: white;
+  left: 10px;
+  top: 6px;
+  border: 2px solid #333;
+  border-radius: 100%;
+}
+
+/******* END TITLE SCREEN STYLING *******/
+
+/******* START DIALOGUE SCREEN STYLING *******/
+
+#dialogue-container:not(.hidden) {
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+
+}
+
+#character-portrait {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  bottom: 220px;
+  left: calc(50% - 150px);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position-x: 0;
+  background-position-y: 0;
+}
+
+.dialogue-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  background: radial-gradient(white 5%, transparent), repeating-linear-gradient(to bottom, #ddd, #ddd 2px, transparent 2px, transparent 20px), repeating-linear-gradient( to right, #ddd, #ddd 2px, transparent 2px, transparent 20px), white;
+}
+
+.dialogue-overlay {
+  display: flex;
+  justify-content: space-between;
+  margin: 14px;
+  z-index: 5;
+}
+
+.dialogue-responses-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 40px 0 40px 0;
+  z-index: 5;
+}
+
+.dialogue-input-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 40px 0 40px 0;
+  z-index: 5;
+}
+
+.dialogue-wrapper {
+  margin: 16px;
+  position: relative;
+  z-index: 5;
+  min-height: 200px;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid #333;
+  box-shadow: 4px 4px #333;
+}
+
+#speaker-name {
+  background: repeating-linear-gradient(to bottom, transparent, transparent 1px, white 1px, white 3px), repeating-linear-gradient(to right, #ccc, #ccc 1px, white 1px, white 3px);
+  font-size: 20px;
+  border-radius: 9px 9px 0 0;
+  padding: 4px;
+  padding-left: 55px;
+  position: relative;
+  border-bottom: 2px solid #333;
+}
+
+#speaker-name::before, #speaker-name::after {
+  content: '';
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background-color: white;
+  top: calc(50% - 7px);
+  left: 10px;
+  border: 2px solid #333;
+  border-radius: 100%;
+}
+
+#speaker-name::after {
+  left: 28px;
+}
+
+#responses button {
+  background-color: rgba(255,255,255);
+  height: 80px;
+  width: 500px;
+  font: inherit;
+  padding: 6px;
+  cursor: pointer;
+  border: 2px solid #333;
+  box-shadow: 4px 4px #333;
+  border-radius: 4px;
+}
+
+#progress-dialogue {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 15px;
+  bottom: 18px;
+  cursor: pointer;
+  animation: wiggle 0.75s infinite linear;
+}
+
+@keyframes wiggle {
+  0% {
+    right: 15px;
+  } 
+  50% {
+    right: 18px;
+  }
+  100% {
+    right: 15px;
+  }
+}
+
+#progress-dialogue div {
+  transform: rotate(45deg);
+    width: 0;
+    height: 0;
+    border-color: #333;
+    border: 7px solid transparent;
+    border-top: 7px solid;
+    border-right: 7px solid;
+    margin: 15px;
+}
+
+#character-dialogue {
+  margin: 8px;
+}
+
+/******* END DIALOGUE SCREEN STYLING *******/
+
+/******* START EPILOGUE SCREEN STYLING *******/
+
+#epilogue-result {
+  margin: 20px 10%
+} 
+
+#epilogue button {
+  background: repeating-linear-gradient(to bottom, transparent, transparent 1px, white 1px, white 3px), repeating-linear-gradient(to right, #ccc, #ccc 1px, white 1px, white 3px);
+  margin: 20px;
+  padding: 8px 20px;
+  font: inherit;
+  cursor: pointer;
+  border: 2px solid #333;
+  box-shadow: 4px 4px #333;
+  border-radius: 4px;
+  transition: all 0.1s;
+}
+
+#epilogue button:hover,
+#epilogue button:focus {
+  box-shadow: 2px 2px #333;
+  margin: 22px 18px 18px 22px;
+}
+
+/******* END EPILOGUE SCREEN STYLING *******/
+
+/******* CAROUSEL STYLING *******/
+
+#myCarousel {
+  height: 300px; /* Adjust the height as needed */
+}
+
+.carousel-item {
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+ }
+ 
+ .carousel-control-next-icon {
+   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+  }
+
+
+.carousel-caption h5{
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 50 px;
+    color:black;
+}
+
+.carousel-caption p{
+    width: 75%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+    color:black;
+}
+
+
+/******* END CAROUSEL STYLING *******/
+
+/******* START STICKY NOTE STYLING *******/
+
+#stickyNote body {
+  margin: 20px auto;
+  font-family: 'Lato';
+  background:#666;
+  color:#fff;
+}
+*{
+  margin:0;
+  padding:0;
+}
+#stickyNote h2 {
+  font-weight: bold;
+  font-size: 1rem;
+}
+#stickyNote p {
+  font-size: 1rem;
+  font-weight: normal;
+}
+#stickyNote ul,li{
+  list-style:none;
+}
+#stickyNote ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#stickyNote ul li a{
+  text-decoration:none;
+  color:#000;
+  background:#ffc;
+  display:block;
+  height:10em;
+  width:10em;
+  padding:1em;
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  transition: transform .15s linear;
+  transform: rotate(-6deg);
+}
+
+/* #stickyNote ul li{
+  margin:0.1em;
+} */
+
+#stickyNote ul li:nth-child(even) a{
+  transform:rotate(4deg);
+  position:relative;
+  top:5px;
+}
+#stickyNote ul li:nth-child(3n) a{
+  transform:rotate(-3deg);
+  position:relative;
+  top:-5px;
+  background:#cfc;
+}
+#stickyNote ul li:nth-child(5n) a{
+  transform:rotate(5deg);
+  position:relative;
+  top:-10px;
+  background:#cfc;
+}
+
+#stickyNote ul li a:hover,ul li a:focus{
+  box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  transform: scale(1.25);
+  position:relative;
+  z-index:5;
+}
+
+/******* END STICKY NOTE STYLING *******/
+
+/******* START INTERACTIVE MAP STYLING *******/
+
+#custom-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 220px; /* Adjust this value as needed to match the height of your dialogue bar */
+  z-index: 6; /* Adjust as needed */
+}
+
+/******* END INTERACTIVE MAP STYLING *******/
