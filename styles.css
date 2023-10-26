@@ -445,3 +445,18 @@ main {
 }
 
 /******* END INTERACTIVE MAP STYLING *******/
+
+#spotifyPlaylist {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 220px;
+  z-index: 7; /* Keep it above other elements */
+}
+
+#spotifyPlaylist iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}

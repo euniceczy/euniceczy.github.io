@@ -1,4 +1,3 @@
-const CLAMPY = "./characters/clampy_sprites.png";
 const MOCHA = "./characters/mocha_bear_spritesheet.png";
 const MOCHA_HAPPY = [MOCHA, 0, 0];
 const MOCHA_HI = [MOCHA, -300, 0];
@@ -17,12 +16,6 @@ const MILK_ANGRY = [MILK, -300, 0];
 const MILK_RUN = [MILK, 0, -300];
 const MILK_TIRED = [MILK, -300, -300];
 
-// These arrays represent character sprites. The first item in the array is the url of the sprite sheet. 
-// The second is the background-position-x used to show the specific sprite you want, and the third is the background-position-y. 
-const CLAMPY_NORMAL = [CLAMPY, 0, 0];
-const CLAMPY_HAPPY = [CLAMPY, 0, -300];
-const CLAMPY_DOUBT = [CLAMPY, -300, 0];
-const CLAMPY_SWEAT = [CLAMPY, -300, -300];
 
 // This is just a constant that checks if the game is over. 
 const FINISH = "FINISH";
@@ -147,7 +140,7 @@ const DIALOGUE_CONTENT = [
   },
   {
     id: 16,
-    text: "These are all of Eunice's favourite moments with you.",
+    text: "Try this playlist! You might like it.",
     speakerName: "Milk and Mocha",
     characterImg: MILK_MOCHA_HUG,
     next: 17,

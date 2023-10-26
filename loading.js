@@ -1,18 +1,16 @@
 /*~~ Declare assets to load behind loading screen ~~*/
 
 // If you're using more sprite sheets or background images, add them here
-imgChar1 = "./characters/clampy_sprites.png";
+imgChar1 = "./images/pin_image.png";
 imgChar2 = "./characters/mocha_bear_spritesheet.png";
 imgChar3 = "./characters/milk_mocha_spritesheet.png";
 imgChar4 = "./characters/milk_spritesheet.png";
-imgChar5 = "./images/pin_image.png";
 
 const imageSrcs = [
   imgChar1,
   imgChar2,
   imgChar3,
-  imgChar4,
-  imgChar5
+  imgChar4
 ];
 imagesLoaded = false;
 

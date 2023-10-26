@@ -163,6 +163,7 @@ function showDialogue(textNodeIndex) {
   }
 
   if (textNodeIndex===17){
+    // state.backgroundAudio.play();
     $("#stickyNote").removeClass("hidden");
     $("#character-portrait").addClass("hidden");
 
@@ -171,6 +172,10 @@ function showDialogue(textNodeIndex) {
       var savedMessage = localStorage.getItem(messageKey);
       var dateKey = "datePlaceholder" + i
       var savedDate = localStorage.getItem(dateKey);
+      if (savedMessage===null){
+        savedMessage="";
+        savedDate="";
+      }
       $("#stickyNote li:nth-child(" + i + ") #message" + i).text(savedMessage);
       $("#stickyNote li:nth-child(" + i + ") #datePlaceholder" + i).text(savedDate);
     }
@@ -181,13 +186,23 @@ function showDialogue(textNodeIndex) {
   }
 
   if (textNodeIndex===16){
-    $("#myCarousel").removeClass("hidden");
+    state.backgroundAudio.pause();
+    $("#spotifyPlaylist").removeClass("hidden");
     $("#character-portrait").addClass("hidden");
   }
   else{
-    $("#myCarousel").addClass("hidden");
+    $("#spotifyPlaylist").addClass("hidden");
     $("#character-portrait").removeClass("hidden");
   }
+
+  // if (textNodeIndex===16){
+  //   $("#myCarousel").removeClass("hidden");
+  //   $("#character-portrait").addClass("hidden");
+  // }
+  // else{
+  //   $("#myCarousel").addClass("hidden");
+  //   $("#character-portrait").removeClass("hidden");
+  // }
 
   $("#character-portrait").css(
     "background-image",
@@ -363,4 +378,6 @@ function restart() {
   showGameStage();
   showDialogue(1);
 }
+
+
 
