@@ -65,57 +65,17 @@ async function initMap() {
 
   var markers = [
     {
-      position: { lat: 1.3008619546890259, lng: 103.83917236328125 }, // Change to the coordinates of your first location
-      title: 'first date - tanuki raw', // Customize the title
-    },
-    {
-      position: { lat: 1.2806917428970337, lng: 103.87089538574219 }, // Change to the coordinates of your first location
-      title: 'favourite date place - marina barrage ', // Customize the title
-    },
-    {
       position: { lat: 1.1963555812835693, lng: 104.10098266601562 }, // Change to the coordinates of your first location
-      title: 'first overseas trip - turi beach resort batam ', // Customize the title
+      title: 'Batam. A lovely place.', // Customize the title
     },
     {
       position: { lat: 1.2814502716064453, lng: 103.86360168457031 }, // Change to the coordinates of your first location
-      title: 'doggie dates - gbtb ', // Customize the title
-    },
-    {
-      position: { lat: 1.4071645736694336, lng: 103.78126525878906 }, // Change to the coordinates of your first location
-      title: 'one of eunices fav dates! - bird paradise ', // Customize the title
-    },
-    {
-      position: { lat: 1.3326259851455688, lng: 103.67892456054688 }, // Change to the coordinates of your first location
-      title: 'singapore discovery center', // Customize the title
-    },
-    {
-      position: { lat: 1.2952570915222168, lng: 103.78013610839844 }, // Change to the coordinates of your first location
-      title: 'study dates - NUS science library', // Customize the title
-    },
-    {
-      position: { lat: 1.271182894706726, lng: 103.81967163085938 }, // Change to the coordinates of your first location
-      title: 'birthday dinner - DUSK mount faber', // Customize the title
-    },
-    {
-      position: { lat: 1.282447338104248, lng: 103.8304214477539 }, // Change to the coordinates of your first location
-      title: 'our first omakase and bday lunch - kyoten', // Customize the title
-    },
-    {
-      position: { lat: 1.2803034782409668, lng: 103.85633087158203 }, // Change to the coordinates of your first location
-      title: 'late night walks - shoppes', // Customize the title
+      title: 'Gardens by the Bay. ', // Customize the title
     },
     {
       position: { lat: 1.4301055669784546, lng: 103.83445739746094 }, // Change to the coordinates of your first location
-      title: 'pasar malam dates - yishun', // Customize the title
-    },
-    {
-      position: { lat: 1.4092413187026978, lng: 103.86808776855469 }, // Change to the coordinates of your first location
-      title: 'chill walks and cafe dates - wheelers estate', // Customize the title
-    },
-    {
-      position: { lat: 1.3095064163208008, lng: 103.85775756835938 }, // Change to the coordinates of your first location
-      title: 'eunices fav food :D - curry rice ', // Customize the title
-    },
+      title: 'Yishun is a wonderful place if you give it a chance.', // Customize the title
+    }
   ];
     
     const infoWindow = new InfoWindow();
@@ -153,7 +113,7 @@ function showDialogue(textNodeIndex) {
   const dialogue = DIALOGUE_CONTENT;
   const textNode = dialogue.find((textNode) => textNode.id === textNodeIndex);
 
-  if (textNodeIndex===18){
+  if (textNodeIndex===17){
     $("#custom-map").removeClass("hidden");
     $("#character-portrait").addClass("hidden");
   }
@@ -162,7 +122,7 @@ function showDialogue(textNodeIndex) {
     $("#character-portrait").removeClass("hidden");
   }
 
-  if (textNodeIndex===17){
+  if (textNodeIndex===10){
     // state.backgroundAudio.play();
     $("#stickyNote").removeClass("hidden");
     $("#character-portrait").addClass("hidden");
