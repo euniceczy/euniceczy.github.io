@@ -1,6 +1,3 @@
-/*~~ Declare assets to load behind loading screen ~~*/
-
-// If you're using more sprite sheets or background images, add them here
 imgChar1 = "./images/pin_image.png";
 imgChar2 = "./characters/mocha_bear_spritesheet.png";
 imgChar3 = "./characters/milk_mocha_spritesheet.png";
@@ -19,10 +16,8 @@ snd1 = "./sounds/typing.mp3";
 snd2 = "./sounds/background_music.mp3";
 const soundSrcs = [snd1,snd2];
 soundsLoaded = false;
-
 allAssetsLoaded = false;
 
-/*~~ Preload assets ~~*/
 $(window).load(function () {
   window.preloadedImages = [];
   imagesLoaded = 0;

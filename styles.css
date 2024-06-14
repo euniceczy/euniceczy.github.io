@@ -87,12 +87,12 @@ main {
 #titlescreen button {
   background: repeating-linear-gradient(to bottom, transparent, transparent 1px, white 1px, white 3px), repeating-linear-gradient(to right, #ccc, #ccc 1px, white 1px, white 3px);
   margin: 20px;
-  padding: 8px 20px;
+  padding: 8px 20px; 
   font: inherit;
   cursor: pointer;
   border: 2px solid #333;
-  box-shadow: 4px 4px #333;
-  border-radius: 4px;
+  box-shadow: 4px 4px #333; 
+  border-radius: 4px; 
   transition: all 0.1s;
 }
 
@@ -101,6 +101,7 @@ main {
   box-shadow: 2px 2px #333;
   margin: 22px 18px 18px 22px;
 }
+
 
 #titlescreen .wrapper {
   width: 90%;

@@ -1,9 +1,7 @@
-/*~~ Set up game logic ~~*/
 const LOADING = 0;
 const TITLE = 1;
 const DIALOGUE = 2;
 const EPILOGUE = 3;
-
 
 state = {
   gameStage: LOADING,
@@ -46,7 +44,6 @@ function handleUserInput() {
       document.getElementById("userInput").value = "";
       break;
     }
-
   }
 }
 
@@ -70,7 +67,7 @@ async function initMap() {
     },
     {
       position: { lat: 1.2806917428970337, lng: 103.87089538574219 }, // Change to the coordinates of your first location
-      title: 'favourite date place - marina barrage ', // Customize the title
+      title: 'favourite place - marina barrage ', // Customize the title
     },
     {
       position: { lat: 1.1963555812835693, lng: 104.10098266601562 }, // Change to the coordinates of your first location
@@ -82,7 +79,7 @@ async function initMap() {
     },
     {
       position: { lat: 1.4071645736694336, lng: 103.78126525878906 }, // Change to the coordinates of your first location
-      title: 'one of eunices fav dates! - bird paradise ', // Customize the title
+      title: ' bird paradise ', // Customize the title
     },
     {
       position: { lat: 1.3326259851455688, lng: 103.67892456054688 }, // Change to the coordinates of your first location
@@ -98,7 +95,7 @@ async function initMap() {
     },
     {
       position: { lat: 1.282447338104248, lng: 103.8304214477539 }, // Change to the coordinates of your first location
-      title: 'our first omakase and bday lunch - kyoten', // Customize the title
+      title: 'first omakase and bday lunch - kyoten', // Customize the title
     },
     {
       position: { lat: 1.2803034782409668, lng: 103.85633087158203 }, // Change to the coordinates of your first location
@@ -114,7 +111,7 @@ async function initMap() {
     },
     {
       position: { lat: 1.3095064163208008, lng: 103.85775756835938 }, // Change to the coordinates of your first location
-      title: 'eunices fav food :D - curry rice ', // Customize the title
+      title: 'fav food - curry rice ', // Customize the title
     },
   ];
     
@@ -195,15 +192,6 @@ function showDialogue(textNodeIndex) {
     $("#character-portrait").removeClass("hidden");
   }
 
-  // if (textNodeIndex===16){
-  //   $("#myCarousel").removeClass("hidden");
-  //   $("#character-portrait").addClass("hidden");
-  // }
-  // else{
-  //   $("#myCarousel").addClass("hidden");
-  //   $("#character-portrait").removeClass("hidden");
-  // }
-
   $("#character-portrait").css(
     "background-image",
     "url(" + textNode.characterImg[0] + ")"
@@ -230,7 +218,6 @@ function showDialogue(textNodeIndex) {
     });
   }
 
-  //eunice testing
   if (textNode.input) {
     const inputField = document.createElement("input");
     inputField.setAttribute("type", "text");
@@ -245,10 +232,7 @@ function showDialogue(textNodeIndex) {
     responseContainer.appendChild(inputField);
     responseContainer.appendChild(submitButton);
   }
-  //eunice testing
 
-
-  // If displaying a dialogue object with text and speaker content
   if (textNode.speakerName && textNode.text) {
     $("#speaker-name").text(textNode.speakerName);
     $("#character-dialogue").empty();
@@ -285,8 +269,6 @@ function showDialogue(textNodeIndex) {
   }
 
 }
-
-
 
 function clearTimeouts(timeouts, textNode) {
   if (loadingText) {
