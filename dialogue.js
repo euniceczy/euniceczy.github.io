@@ -45,21 +45,21 @@ const DIALOGUE_CONTENT = [
   },
   {
     id: 3,
-    text: "First of all, HAPPY ANNIVERSARY!!! I'm so happy you're here!",
+    text: "First of all, I'm so happy you're here!",
     speakerName: "Mocha Bear",
     characterImg: MOCHA_HAPPY,
     next: 4,
   },
   {
     id: 4,
-    text: "My name is Mocha Bear",
+    text: "My name is Mocha Bear. Eunice has created this website as a template for annviersary presents. I hope you enjoy it!",
     speakerName: "Mocha Bear",
     characterImg: MOCHA_HI,
     next: 5,
   },
   {
     id: 5,
-    text: "I'm always with Milk, I love Milk!",
+    text: "In an effort to showcase her work, this project will be used to present as a personal project",
     speakerName: "Mocha Bear",
     characterImg: MILK_MOCHA_HUG2,
     next: 9,
@@ -98,7 +98,7 @@ const DIALOGUE_CONTENT = [
   },
   {
     id: 10,
-    text: "Hi Ivan! I'm Milk! Welcome",
+    text: "Hi there! I'm Milk! Welcome",
     speakerName: "Milk",
     characterImg: MILK_RUN,
     next: 15,
@@ -165,12 +165,12 @@ const DIALOGUE_CONTENT = [
     text: "You've reached the end of the game. How are you feeling?",
     options: [
       {
-        text: "i'm really happy with this present",
+        text: "I'm really happy with this present",
         nextText: 101,
         setState: { epilogue: 1 },
       },
       {
-        text: "i'm really touched",
+        text: "I'm really touched",
         nextText: 102,
         setState: { epilogue: 2 },
       },
@@ -213,7 +213,7 @@ const DIALOGUE_CONTENT = [
   },
   {
     id: 104,
-    text: "I'm happy that you like this present. When Eunice coded us, the goal was to make you cry. Thank you for loving Eunice so much.",
+    text: "I'm happy that you like this present. When Eunice coded us, the goal was to make you cry. Thank you for liking this project.",
     speakerName: "Milk and Mocha",
     characterImg: MILK_MOCHA_HUG,
     next: FINISH
