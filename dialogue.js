@@ -52,14 +52,14 @@ const DIALOGUE_CONTENT = [
   },
   {
     id: 4,
-    text: "My name is Mocha Bear. Eunice has created this website as a template for annviersary presents. I hope you enjoy it!",
+    text: "My name is Mocha Bear. Eunice has created this website as a template for anniversary presents. I hope you enjoy it!",
     speakerName: "Mocha Bear",
     characterImg: MOCHA_HI,
     next: 5,
   },
   {
     id: 5,
-    text: "In an effort to showcase her work, this project will be used to present as a personal project",
+    text: "In an effort to showcase her work, this project will be used to present as a personal project for upcoming interviews.",
     speakerName: "Mocha Bear",
     characterImg: MILK_MOCHA_HUG2,
     next: 9,
@@ -98,7 +98,7 @@ const DIALOGUE_CONTENT = [
   },
   {
     id: 10,
-    text: "Hi there! I'm Milk! Welcome",
+    text: "Hi there! I'm Milk! Welcome! I hope you like this website so far.",
     speakerName: "Milk",
     characterImg: MILK_RUN,
     next: 15,
@@ -154,7 +154,7 @@ const DIALOGUE_CONTENT = [
   },
   {
     id: 18,
-    text: "These are locations of some of the most memorable dates. Feel free to zoom in and click on the icons.",
+    text: "These are locations of some of the most memorable dates. Feel free to zoom in and click on the icons. As my trial version has expired, it may have a popup error but just click ok!",
     speakerName: "Milk and Mocha",
     characterImg: "./heart.ico",
     next: 100,
